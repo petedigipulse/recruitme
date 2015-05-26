@@ -47,14 +47,13 @@
 		        </div>
 		        <button type="submit" class="btn btn-default">Submit</button>
 		      </form>
-		        <% if current_user %>
+		        <% if current_employer %>
 		      <ul class="nav navbar-nav navbar-right">
-		   	
-		   	  	<li><%= current_user.email %></li>
+		   	  	<li><%= current_employer.email %></li>
 		   	  	<li><%= link_to "Log Out", logout_path, method: "delete" %></li>
 		   	  <% else %>
 		        <li><%= link_to "Login", 'login' %></a></li>
-		        <li><%= link_to "Sign Up", 'login' %></a></li>
+		        <li><%= link_to "Sign Up", 'signup' %></a></li>
 		      <% end %>
 		      </ul>
 		    </div>
