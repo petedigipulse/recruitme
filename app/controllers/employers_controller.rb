@@ -1,6 +1,7 @@
 class EmployersController < ApplicationController
   before_action :set_employer, only: [:show, :edit, :update, :destroy]
- 
+  before_action :require_employer, only: [:index, :show]
+
   # GET /employers
   # GET /employers.json
   def index
@@ -10,6 +11,7 @@ class EmployersController < ApplicationController
   # GET /employers/1
   # GET /employers/1.json
   def show
+    
   end
 
   # GET /employers/new
