@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ratings: 1
+  status: MyString
+  type: 
+  ratings_by: MyString
+  candidates: MyString
+  comments: MyText
+  comments_by: MyString
+
+two:
+  ratings: 1
+  status: MyString
+  type: 
+  ratings_by: MyString
+  candidates: MyString
+  comments: MyText
+  comments_by: MyString

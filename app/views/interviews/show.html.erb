@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ratings:</strong>
+  <%= @interview.ratings %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @interview.status %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @interview.type %>
+</p>
+
+<p>
+  <strong>Ratings by:</strong>
+  <%= @interview.ratings_by %>
+</p>
+
+<p>
+  <strong>Candidates:</strong>
+  <%= @interview.candidates %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @interview.comments %>
+</p>
+
+<p>
+  <strong>Comments by:</strong>
+  <%= @interview.comments_by %>
+</p>
+
+<%= link_to 'Edit', edit_interview_path(@interview) %> |
+<%= link_to 'Back', interviews_path %>
