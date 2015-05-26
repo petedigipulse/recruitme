@@ -5,13 +5,11 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <!DOCTYPE html>
-<html>
-<head>
+  
 	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/flatly/bootstrap.min.css" rel="stylesheet">
 	
 </head>
-
+<body>
 <div class="container">
 
 		<nav class="navbar navbar-inverse">
@@ -49,22 +47,23 @@
 		        </div>
 		        <button type="submit" class="btn btn-default">Submit</button>
 		      </form>
-		      
+		        <% if current_user %>
 		      <ul class="nav navbar-nav navbar-right">
-		   	  <% if current_employer %>
-		   	  	<li><%= current_employer.email %></li>
+		   	
+		   	  	<li><%= current_user.email %></li>
 		   	  	<li><%= link_to "Log Out", logout_path, method: "delete" %></li>
 		   	  <% else %>
-		        <li><%= link_to "Login" %></a></li>
-		        <li><%= link_to "Sign Up" 'login' %></a></li>
+		        <li><%= link_to "Login", 'login' %></a></li>
+		        <li><%= link_to "Sign Up", 'login' %></a></li>
+		      <% end %>
 		      </ul>
 		    </div>
 		  </div>
 		</nav>
-</head>
-<body>
+
+
 
 <%= yield %>
-
+</div>
 </body>
 </html>

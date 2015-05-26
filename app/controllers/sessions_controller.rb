@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
 
 
 	def destroy 
-		@employee
+		
 			session[:employee_id] = nil
 			redirect_to '/'
 	end
