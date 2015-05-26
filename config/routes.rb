@@ -4,8 +4,15 @@ Rails.application.routes.draw do
   resources :interviews
   resources :positions
   resources :candidates
+
+
+  get 'signup' => 'employers#new'
   resources :employers
-  resources :recruiters
+  # post 'signup' 
+
+
+  get 'signup' => 'candidate#new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

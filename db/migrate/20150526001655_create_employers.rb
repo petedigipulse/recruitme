@@ -6,6 +6,7 @@ class CreateEmployers < ActiveRecord::Migration
       t.string :email
       t.string :company
       t.string :phone
+      t.string :password_digest
 
       t.timestamps null: false
     end

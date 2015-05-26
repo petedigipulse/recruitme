@@ -28,7 +28,8 @@ class EmployersController < ApplicationController
 
     respond_to do |format|
       if @employer.save
-        format.html { redirect_to @employer, notice: 'Employer was successfully created.' }
+        session[:employer_id] = @employer.id
+        format.html { redirect_to @employer, notice: 'Your account was successfully created.' }
         format.json { render :show, status: :created, location: @employer }
       else
         format.html { render :new }
@@ -69,6 +70,6 @@ class EmployersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def employer_params
-      params.require(:employer).permit(:first_name, :last_name, :email, :company, :phone)
+      params.require(:employer).permit(:first_name, :last_name, :email, :company, :phone, :password)
     end
 end
