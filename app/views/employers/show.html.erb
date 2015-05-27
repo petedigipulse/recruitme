@@ -60,7 +60,7 @@
           <ul class="list-group">
             <li class="list-group-item">
               <span class="badge">14</span>
-              All Positions
+              <%= link_to "All Positions", positions_path%>
             </li>
             <li class="list-group-item">
               <span class="badge">2</span>
@@ -68,7 +68,7 @@
             </li>
             <li class="list-group-item">
               <span class="badge">15</span>
-              Positions Filled
+             <%= link_to "Positions Won", positions_path%>
             </li>
             <li class="list-group-item">
               <span class="badge">10</span>
@@ -81,7 +81,7 @@
           </div>
               <div class="panel-body">
                  
-                  <a href="#" align="right" class="btn btn-success">Create</a>
+                  <a href="/positions/new" align="right" class="btn btn-success">Create</a>
                   <p align="right"> Create your new position</p>
               </div>
           </div>
@@ -98,7 +98,7 @@
           <ul class="list-group">
             <li class="list-group-item">
               <span class="badge">14</span>
-              New Candidates
+              <%= link_to "All Interviews", interviews_path%>
             </li>
             <li class="list-group-item">
               <span class="badge">2</span>
@@ -118,7 +118,7 @@
               <h3 class="panel-title">Create New Interview</h3>
           </div>
               <div class="panel-body">
-                 <a href="#" align="right" class="btn btn-success">Create</a>
+                 <a href="/interviews/new" align="right" class="btn btn-success">Create</a>
                  <p align="right"> Create your new interview</p>
 
               </div>
