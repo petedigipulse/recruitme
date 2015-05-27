@@ -14,7 +14,7 @@
 	
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
 
 		<nav class="navbar navbar-inverse">
 		  <div class="container-fluid">
@@ -54,8 +54,8 @@
 		      </form>
 		        <% if current_employer %>
 		      <ul class="nav navbar-nav navbar-right">
-		   	  	<li><%= current_employer.email %></li>
-		   	  	<li><%= link_to "Dashboard", employer_path %></li>
+		   	  	<li><%= link_to "#{current_employer.email}", current_employer%></li>
+		   	  	<li><%= link_to "Dashboard", current_employer %></li>
 		   	  	<li><%= link_to "Log Out", logout_path, method: "delete" %></li>
 		   	  <% else %>
 		        <li><%= link_to "Login", 'login' %></a></li>

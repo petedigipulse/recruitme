@@ -1,4 +1,82 @@
-<%= form_for(@position) do |f| %>
+<div class="container-fluid"
+<div class="row">
+  <div class="col-md-8"><form class="form-horizontal">
+  <fieldset>
+    <legend>Create A New Job Position</legend>
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Position Advertised</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="inputEmail" placeholder="Job Position">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword" class="col-lg-2 control-label">Department</label>
+      <div class="col-lg-10">
+        <input type="password" class="form-control" id="inputPassword" placeholder="Department">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Show on ad
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="textArea" class="col-lg-2 control-label">Job Description</label>
+      <div class="col-lg-10">
+        <textarea class="form-control" rows="3" id="textArea" placeholder="Awww Wicked! Good afterble constanoon, don't be a egg, that's a barry. More drugs, more threesomes, this stoked housie is as wicked as a beaut kai moana. Mean while, in The Naki, Cardigan Bay and James and the Giant Peach were up to no good with a bunch of buzzy toasted sandwichs. The solid rimu force of his whale watching was on par with Spot, the Telecom dog's outrageously awesome tomato sauce. Put the jug on will you bro, all these carked it sections can wait till later. The first prize for packing a sad goes to... Mrs Falani and his mint length of number 8 wire, what a manus.
+
+"></textarea>
+        <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Job Status</label>
+      <div class="col-lg-10">
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+            Open
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            Position Taken
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="select" class="col-lg-2 control-label">Existing Questions</label>
+      <div class="col-lg-10">
+        <select class="form-control" id="select">
+          <option>Why do you want to work for our company</option>
+          <option>What is your experience when dealing with irate customer</option>
+          <option>Tell us why you love what your doing!</option>
+          <option>Tell us your greatest acheivements</option>
+          <option>What are your passionate about</option>
+        </select>
+        <br>
+        <select multiple="" class="form-control">
+          <option>Why do you want to work for our company?</option>
+          <option>What is your experience when dealing with irate customer?</option>
+          <option>Tell us why you love what your doing!</option>
+          <option>Tell us your greatest acheivements!</option>
+          <option>What are your passionate about?</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+
+</div>
+  <div class="col-md-4"><%= form_for(@position) do |f| %>
   <% if @position.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@position.errors.count, "error") %> prohibited this position from being saved:</h2>
@@ -31,3 +109,15 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
