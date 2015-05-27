@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Recruitme</title>
+  <title>RecruitMe XS</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  
+	
+
+<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
 	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/flatly/bootstrap.min.css" rel="stylesheet">
 	
 </head>
@@ -21,13 +25,14 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="#">RecruitMe XS</a>
+		      <a class="navbar-brand" href="/">RecruitMe XS</a>
 		    </div>
 
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
 		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="#">About Us <span class="sr-only">(current)</span></a></li>
+		        <li><a href="/welcome/pricing">Pricing <span class="sr-only"></span></a></li>
 		        <li><a href="#">Contact Us</a></li>
+		        <li><a href="#">Blog</a></li>
 		        <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Our Platform <span class="caret"></span></a>
 		          <ul class="dropdown-menu" role="menu">
