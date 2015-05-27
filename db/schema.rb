@@ -19,6 +19,10 @@ ActiveRecord::Schema.define(version: 20150526004311) do
     t.string   "email"
     t.string   "phone"
     t.string   "password_digest"
+    t.string   "profile_image"
+    t.string   "files"
+    t.string   "links"
+    t.string   "cv"gitgit 
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
@@ -35,6 +39,8 @@ ActiveRecord::Schema.define(version: 20150526004311) do
   end
 
   create_table "interviews", force: :cascade do |t|
+    t.string   "questions"
+    t.string   "videos"
     t.integer  "ratings"
     t.string   "status"
     t.string   "type"
