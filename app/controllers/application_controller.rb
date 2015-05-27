@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
 
   def current_employer
-  	@current_employer ||= Employer.find(session[:employer_id]) if session[:employer_id]
+  	@current_employer ||= Employer.find(session[:employer_id]) if session[:employer_id] 
   end
 
   def require_employer
