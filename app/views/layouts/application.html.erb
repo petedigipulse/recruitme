@@ -49,7 +49,7 @@
 		      </form>
 		        <% if current_employer %>
 		      <ul class="nav navbar-nav navbar-right">
-		   	  	<li><%= current_employer.email %></li>
+		   	  	<%= current_employer.email %>
 		   	  	<li><%= link_to "Log Out", logout_path, method: "delete" %></li>
 		   	  <% else %>
 		        <li><%= link_to "Login", 'login' %></a></li>
