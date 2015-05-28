@@ -1,4 +1,4 @@
 class Interview < ActiveRecord::Base
-	belongs_to :employers
-	belongs_to :candidates
+	belongs_to :employer
+	belongs_to :candidate
 end

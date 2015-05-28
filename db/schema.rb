@@ -22,7 +22,11 @@ ActiveRecord::Schema.define(version: 20150526004311) do
     t.string   "profile_image"
     t.string   "files"
     t.string   "links"
-    t.string   "cv"gitgit 
+    t.string   "cv"
+    t.string   "employer"
+    t.string   "position_title"
+    t.string   "video_responses" #hash? 
+
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
@@ -39,13 +43,12 @@ ActiveRecord::Schema.define(version: 20150526004311) do
   end
 
   create_table "interviews", force: :cascade do |t|
-    t.string   "questions"
-    t.string   "videos"
+    t.string   "video_response"
     t.integer  "ratings"
     t.string   "status"
     t.string   "type"
+    t.string   "candidate"
     t.string   "ratings_by"
-    t.string   "candidates"
     t.text     "comments"
     t.string   "comments_by"
     t.datetime "created_at",  null: false
@@ -53,9 +56,17 @@ ActiveRecord::Schema.define(version: 20150526004311) do
   end
 
   create_table "positions", force: :cascade do |t|
+    t.datetime "start_date" 
+    t.datetime "closing_date"  
     t.string   "department"
-    t.string   "contact"
-    t.text     "questions"
+    t.string   'job_position'
+    t.text     "job_title"
+    t.text     "desciption"
+    t.string   "dept_contact"
+    t.string   "job_role_questions"
+    t.string   "seed_questions"
+    t.string   "upload_seek"
+    t.string   "upload_trademe"
     t.string   "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
