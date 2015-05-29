@@ -10,6 +10,8 @@ class InterviewsController < ApplicationController
   # GET /interviews/1
   # GET /interviews/1.json
   def show
+    @interviews = Interview.find_by(params[:positions_id], params[:candidates_id])
+    # @interviews = Interview.find_by(params[:positions_id], params[:candidates_id])
   end
 
   # GET /interviews/new

@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150526004311) do
     t.string   "cv"
     t.string   "employer"
     t.string   "position_title"
-    t.string   "video_responses" #hash? 
+    t.string   "video_response_id" #hash? 
 
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
@@ -47,10 +47,13 @@ ActiveRecord::Schema.define(version: 20150526004311) do
     t.integer  "ratings"
     t.string   "status"
     t.string   "type"
-    t.string   "candidate"
+    t.string   "candidate_name"
+    t.string   "candidate_id"
+    t.string   "candidate_img"
     t.string   "ratings_by"
     t.text     "comments"
     t.string   "comments_by"
+    t.string   "staff_notified"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -68,6 +71,7 @@ ActiveRecord::Schema.define(version: 20150526004311) do
     t.string   "upload_seek"
     t.string   "upload_trademe"
     t.string   "status"
+    t.string   "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
