@@ -30,6 +30,8 @@ gem 'simple_form'
 
 gem 'paperclip'
 
+gem 'rmagick', '~> 2.15.0'
+
 
 
 # Use Unicorn as the app server
