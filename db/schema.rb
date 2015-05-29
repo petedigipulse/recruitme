@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150526004311) do
+ActiveRecord::Schema.define(version: 20150529225428) do
 
   create_table "candidates", force: :cascade do |t|
     t.string   "first_name"
@@ -25,10 +25,13 @@ ActiveRecord::Schema.define(version: 20150526004311) do
     t.string   "cv"
     t.string   "employer"
     t.string   "position_title"
-    t.string   "video_response_id" #hash? 
-
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "video_response_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "employers", force: :cascade do |t|
@@ -38,8 +41,12 @@ ActiveRecord::Schema.define(version: 20150526004311) do
     t.string   "company"
     t.string   "phone"
     t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "interviews", force: :cascade do |t|
@@ -54,15 +61,15 @@ ActiveRecord::Schema.define(version: 20150526004311) do
     t.text     "comments"
     t.string   "comments_by"
     t.string   "staff_notified"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "positions", force: :cascade do |t|
-    t.datetime "start_date" 
-    t.datetime "expiry_date"  
+    t.datetime "start_date"
+    t.datetime "expiry_date"
     t.string   "department"
-    t.string   'job_position'
+    t.string   "job_position"
     t.string   "job_title"
     t.text     "description"
     t.string   "dept_contact"
@@ -74,8 +81,8 @@ ActiveRecord::Schema.define(version: 20150526004311) do
     t.string   "type"
     t.string   "tags"
     t.string   "candidate_ranking"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
 end
