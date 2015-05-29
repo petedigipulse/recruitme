@@ -10,6 +10,9 @@ class CreateCandidates < ActiveRecord::Migration
       t.string :files
       t.string :links
       t.string :cv
+      t.string :employer
+      t.string :position_title
+      t.string :video_response_id
 
       t.timestamps null: false
     end

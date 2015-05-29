@@ -60,18 +60,20 @@ ActiveRecord::Schema.define(version: 20150526004311) do
 
   create_table "positions", force: :cascade do |t|
     t.datetime "start_date" 
-    t.datetime "closing_date"  
+    t.datetime "expiry_date"  
     t.string   "department"
     t.string   'job_position'
-    t.text     "job_title"
-    t.text     "desciption"
+    t.string   "job_title"
+    t.text     "description"
     t.string   "dept_contact"
-    t.string   "job_role_questions"
+    t.text     "job_role_questions"
     t.string   "seed_questions"
     t.string   "upload_seek"
     t.string   "upload_trademe"
-    t.string   "status"
+    t.string   "position_status"
     t.string   "type"
+    t.string   "tags"
+    t.string   "candidate_ranking"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
