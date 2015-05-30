@@ -6,7 +6,6 @@ class CreateCandidates < ActiveRecord::Migration
       t.string :email
       t.string :phone
       t.string :password_digest
-      t.string :profile_image
       t.string :files
       t.string :links
       t.string :cv
