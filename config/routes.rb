@@ -3,7 +3,13 @@ Rails.application.routes.draw do
   get 'welcome/pricing'
 
 
-  resources :interviews
+  resources :interviews do
+    collection do 
+      get :recent
+      get :ranking
+    end
+  end
+
   resources :positions
   resources :candidates
 

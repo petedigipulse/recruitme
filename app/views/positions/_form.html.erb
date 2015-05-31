@@ -1,4 +1,4 @@
-<div class="container-fluid"
+<div class="container-fluid">
 <div class="row">
   <div class="col-md-8"><form class="form-horizontal">
   <fieldset>
@@ -102,35 +102,9 @@
 </form>
 
 </div>
-  <div class="col-md-4"><%= form_for(@position) do |f| %>
-  <% if @position.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@position.errors.count, "error") %> prohibited this position from being saved:</h2>
 
-      <ul>
-      <% @position.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :department %><br>
-    <%= f.text_field :department %>
-  </div>
-  <div class="field">
-    <%= f.label :contact %><br>
-    <%= f.text_field :dept_contact %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-</div>
-</div>
-</div>
-
+ 
 
 
 

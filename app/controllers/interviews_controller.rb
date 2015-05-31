@@ -7,12 +7,22 @@ class InterviewsController < ApplicationController
     @interviews = Interview.all
   end
 
+  def recent
+    @inteviews = Interview.recent
+    render action: :show
+  end
+
+  def ranking
+    @interviews = Interview.ranking
+    render action: :show
+  end
+
   # GET /interviews/1
   # GET /interviews/1.json
-  def show
-    @interviews = Interview.find_by(params[:positions_id], params[:candidates_id])
-    # @interviews = Interview.find_by(params[:positions_id], params[:candidates_id])
-  end
+  # def show
+  #   @interview = Interview.find_by(params[:positions_id], params[:candidates_id])
+  #   # @interviews = Interview.find_by(params[:positions_id], params[:candidates_id])
+  # end
 
   # GET /interviews/new
   def new

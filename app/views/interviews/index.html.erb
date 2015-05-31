@@ -1,133 +1,46 @@
 
-
+<%= link_to 'Recently Added Interviews', recent_interviews_path, class: 'link'%>
+<%= link_to 'Rankings', ranking_interviews_path, class: 'link' %>
 <p id="notice"><%= notice %></p>
 
 <!-- interate through @interviews 
 build html dynamically
 build with js or angular
  -->
-<h1>Candidate Interviews</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Ratings</th>
-      <th>Status</th>
-      <th>Type</th>
-      <th>Ratings by</th>
-      <th>Candidates</th>
-      <th>Comments</th>
-      <th>Comments by</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-
-    <% @interviews.each do |interview| %>
-      <tr>
-        <td><%= interview.candidate_id %></td>
-        <td><%= interview.candidate_name %></td>
-        <td><%= interview.candidate_img %></td>
-        <td><%= interview.video_response %></td>
-        <td><%= interview.ratings %></td>
-        <td><%= interview.status %></td>
-       
-  
-        <td><%= link_to 'Show', interview %></td>
-        <td><%= link_to 'Edit', edit_interview_path(interview) %></td>
-        <td><%= link_to 'Destroy', interview, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<!--  -->
 
 <div class='container'>
   <h3>My Interviews</h3>
+   
 
-<div class="row">
-  <div class="col-md-12"><table class="table table-striped table-hover ">
-  <thead>
-    <tr>
-      <th>Job#</th>
-      <th>Dept</th>
-      <th>Job Title</th>
-      <th>Completed Interviews</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Marketing</td>
-      <td>Digital marketing expert</td>
-      <center><td>5</td></center>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>IT</td>
-      <td>Web Developer</td>
-      <td>4</td>
-    </tr>
-    <tr class="info">
-      <td>3</td>
-      <td>Sales</td>
-      <td>Sales Consultant</td>
-      <td>4</td>
-    </tr>
-    <tr class="success">
-      <td>4</td>
-      <td>HR</td>
-      <td>Liason Officer</td>
-      <td>3</td>
-    </tr>
-    <tr class="danger">
-      <td>5</td>
-      <td>Admin</td>
-      <td>Receptionist</td>
-      <td>1</td>
-    </tr>
-    <tr class="warning">
-      <td>6</td>
-      <td>Design</td>
-      <td>Front End Developer</td>
-      <td>5</td>
-    </tr>
-    <tr class="active">
-      <td>7</td>
-      <td>Development</td>
-      <td>Project Manager</td>
-      <td>4</td>
-    </tr>
-  </tbody>
-</table> 
+    <% @interviews.each do |interview| %>
 
-</div></div>
-  <br>
   <h3>Latest Candidate Interviews</h3>
-  
-  <div class="box">
+
+<div class="box">
   <div class="col-sm-6 col-md-4">
-    
   </div>
 </div>
 
   <div class="col-md-4">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h3 class="panel-title">Pippa Duncan</h3>
+        <h3 class="panel-title"><%=interview.candidate_name%></h3>
       </div>
           <div class="panel-body">
-              <img src="/assets/bec-pippa.jpeg" alt="..."> 
-              <strong><p>Marketing Role</p></strong>
+              <%= interview.candidate_img %>
+              <strong><p>Job Title:</p></strong><p><%= interview.job_title %></p>
                 <strong><p>Description</p></strong>
-                  <p>This role is for a digital marketing...</p>
+                  <p><%= interview.job_description %></p>
                 <div class="caption">
                   <p><a href="/interviews/show" class="btn btn-primary" role="button">View</a> Button</a></p>
-
-
                 </div>
+          </div>
+    </div>
+  </div>
+<% end %>
+
+ <!--                </div>
           </div>  
       </div>
     </div>
@@ -221,12 +134,69 @@ build with js or angular
 
 
 
-  
-</div>
-</div>
-</div>
+   -->
 
-</div>
+
+
+
+<!-- <div class="row">
+  <div class="col-md-12"><table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Job#</th>
+      <th>Dept</th>
+      <th>Job Title</th>
+      <th>Completed Interviews</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Marketing</td>
+      <td>Digital marketing expert</td>
+      <center><td>5</td></center>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>IT</td>
+      <td>Web Developer</td>
+      <td>4</td>
+    </tr>
+    <tr class="info">
+      <td>3</td>
+      <td>Sales</td>
+      <td>Sales Consultant</td>
+      <td>4</td>
+    </tr>
+    <tr class="success">
+      <td>4</td>
+      <td>HR</td>
+      <td>Liason Officer</td>
+      <td>3</td>
+    </tr>
+    <tr class="danger">
+      <td>5</td>
+      <td>Admin</td>
+      <td>Receptionist</td>
+      <td>1</td>
+    </tr>
+    <tr class="warning">
+      <td>6</td>
+      <td>Design</td>
+      <td>Front End Developer</td>
+      <td>5</td>
+    </tr>
+    <tr class="active">
+      <td>7</td>
+      <td>Development</td>
+      <td>Project Manager</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table> 
+
+</div> -->
+
 
 
 

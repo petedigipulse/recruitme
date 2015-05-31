@@ -1,4 +1,15 @@
-notes.txt
+Interviews
+
+Complete Candidate sign up
+When an Employer creates a position 
+click publish 
+the employer can invite new candidates by searching with filters and tags
+when the Can candidate recieves and email with a link 
+Candidate logs in and clicks on the interview link
+
+New candidates sign up the interview will be on their control panel main page. 
+new candidate clicks link and conducts interview. 
+
 
 
 

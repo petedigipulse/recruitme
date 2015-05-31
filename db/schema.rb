@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150529225428) do
+ActiveRecord::Schema.define(version: 20150530234725) do
 
   create_table "candidates", force: :cascade do |t|
     t.string   "first_name"
@@ -41,15 +41,18 @@ ActiveRecord::Schema.define(version: 20150529225428) do
     t.string   "company"
     t.string   "phone"
     t.string   "password_digest"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "interviews_count",   default: 0
   end
 
   create_table "interviews", force: :cascade do |t|
+    t.string   "job_title"
+    t.string   "job_description"
     t.string   "video_response"
     t.integer  "ratings"
     t.string   "status"
