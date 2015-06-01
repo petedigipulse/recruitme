@@ -30,6 +30,38 @@
 <%= link_to 'Edit', edit_interview_path(@interview) %> |
 <%= link_to 'Back', interviews_path %>
 
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe width="360" height="215" src="https://www.youtube.com/embed/Yc4SN41VMHc?rel=0" frameborder="0" allowfullscreen></iframe>
+<div>
+  <center><iframe width="660" height="415" src="https://www.youtube.com/embed/Yc4SN41VMHc?rel=0" frameborder="0" allowfullscreen></iframe></center>
 </div>
+
+<br> 
+<div class='container'>
+  <div class="progress">
+  <div class="progress-bar" style="width: 100%;"></div>
+</div>
+  <div class="row">
+    <div class="col-xs-6 col-md-3">
+      <h5>Interview Question One</h5>
+        <p><%= image_tag @candidates.image.url :thumb %></p>
+         <a href="#" class="btn btn-primary" role="button">View</a>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <h5>Interview Question Two</h5>
+        <p><%= image_tag @candidates.image.url :thumb %></p>
+         <a href="#" class="btn btn-primary" role="button">View</a>
+      </a>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <h5>Interview Question Three</h5>
+        <p><%= image_tag @candidates.image.url :thumb %></p>
+         <a href="#" class="btn btn-primary" role="button">View</a>
+      </a>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <h5>Interview Question Four</h5>
+        <p><%= image_tag @candidates.image.url :thumb %></p>
+        <a href="#" class="btn btn-primary" role="button">View</a>
+    </div>
+  </div>
+</div>
+

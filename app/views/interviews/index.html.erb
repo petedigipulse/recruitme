@@ -28,16 +28,16 @@ build with js or angular
           <div class="panel-body">
           <% @candidates.each do |candidate| %>
               <% if candidate.id == interview.candidate.id %>
-            <%= image_tag candidate.image.url :thumb %>
-                <%end%>
+            <p><%= image_tag candidate.image.url :thumb %></p>
               <%end%>
-              <strong><p>Job Title:  </strong><%=   interview.job_title %></p>
-                <strong><p>Description</p></strong>
-                  <p><%= interview.job_description %></p>
+            <%end%>
+              <strong><p align='right'>Job Title: </strong><%= interview.job_title %></p>
+                
                 <div class="caption">
 
                   <p class="btn btn-primary" role="button"><%= link_to "Interview", interview_path(interview.id) %></a></p>
                 </div>
+             
           </div>
     </div>
   </div>
