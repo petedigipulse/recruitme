@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 		@employer = Employer.find_by_email(params[:session][:email])
 			if @employer && @employer.authenticate(params[:session][:password])
 				session[:employer_id] = @employer.id
-				redirect_to '/'
+				redirect_to '/employer'
 			else
 				redirect_to 'login'
 			end
