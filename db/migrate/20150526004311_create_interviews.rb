@@ -2,7 +2,7 @@ class CreateInterviews < ActiveRecord::Migration
   def change
     create_table :interviews do |t|
       t.string :job_title
-      t.string :description
+      t.string :job_description
       t.string :video_response
       t.string :candidate_name
       t.string :candidate_id

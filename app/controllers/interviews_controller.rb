@@ -5,6 +5,7 @@ class InterviewsController < ApplicationController
   # GET /interviews.json
   def index
     @interviews = Interview.all
+    @candidates = Candidate.all
   end
 
   def recent

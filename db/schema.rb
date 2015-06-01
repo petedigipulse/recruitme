@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20150530234725) do
     t.string   "email"
     t.string   "phone"
     t.string   "password_digest"
-    t.string   "profile_image"
     t.string   "files"
     t.string   "links"
     t.string   "cv"
@@ -54,23 +53,23 @@ ActiveRecord::Schema.define(version: 20150530234725) do
     t.string   "job_title"
     t.string   "job_description"
     t.string   "video_response"
-    t.integer  "ratings"
-    t.string   "status"
-    t.string   "type"
     t.string   "candidate_name"
     t.string   "candidate_id"
     t.string   "candidate_img"
+    t.integer  "ratings"
+    t.string   "status"
+    t.string   "type"
     t.string   "ratings_by"
     t.text     "comments"
     t.string   "comments_by"
     t.string   "staff_notified"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "positions", force: :cascade do |t|
-    t.datetime "start_date"
-    t.datetime "expiry_date"
+    t.date     "start_date"
+    t.date     "expiry_date"
     t.string   "department"
     t.string   "job_position"
     t.string   "job_title"
@@ -80,10 +79,10 @@ ActiveRecord::Schema.define(version: 20150530234725) do
     t.string   "seed_questions"
     t.string   "upload_seek"
     t.string   "upload_trademe"
-    t.string   "position_status"
     t.string   "type"
-    t.string   "tags"
     t.string   "candidate_ranking"
+    t.string   "tags"
+    t.string   "position_status"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
   end
