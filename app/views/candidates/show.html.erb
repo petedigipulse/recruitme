@@ -1,30 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class='container-fluid'>
+
 <p id="notice"><%= notice %></p>
 
-<p>
+<div class="row">
+  <div class="col-md-4"><p>
+	  <h1>My DashBoard</h1>
+	  <%= image_tag @candidate.image.url :thumb %>
+	</p>
+	<p>
+	  <strong>First name:</strong>
+	  <%= @candidate.first_name %>
+	</p>
+
+	<p>
+	  <strong>Last name:</strong>
+	  <%= @candidate.last_name %>
+	</p>
+
+	<p>
+	  <strong>Email:</strong>
+	  <%= @candidate.email %>
+	</p>
+
+	<p>
+	  <strong>Phone:</strong>
+	  <%= @candidate.phone %>
+	</p>
+
+	<%= link_to 'Edit', edit_candidate_path(@candidate) %> |
+	<%= link_to 'Back', candidates_path %>
+</div>
+
+  <div class="col-md-8"><div class="row">
+        
+</div>
+<br>
+
+
+  <div class="col-md-4">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">My Job Positions</h3>
+        </div>
+        <div class="panel-body">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <span class="badge">14</span>
+              <%= link_to "All Current  Positions", positions_path%>
+            </li>
+            <li class="list-group-item">
+              <span class="badge">2</span>
+              Upcoming Positions
+            </li>
+            <li class="list-group-item">
+              <span class="badge">15</span>
+             <%= link_to "Positions Won", positions_path%>
+            </li>
+            <li class="list-group-item">
+              <span class="badge">10</span>
+              Completed Interviews
+            </li>
+          </ul>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Create New Position</h3>
+          </div>
+              <div class="panel-body">
+                 
+                  <a href="/positions/new" align="right" class="btn btn-success">Create</a>
+                  <p align="right"> Create your new position</p>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="col-md-4">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h3 class="panel-title">My Interviews</h3>
+        </div>
+        <div class="panel-body">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <span class="badge">14</span>
+              <%= link_to "All Interviews", interviews_path%>
+            </li>
+            <li class="list-group-item">
+              <span class="badge">2</span>
+              All Current Interviews
+            </li>
+            <li class="list-group-item">
+              <span class="badge">15</span>
+              Interview Feedback
+            </li>
+            <li class="list-group-item">
+              <span class="badge">10</span>
+              Completed Interviews
+            </li>
+          </ul>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Create New Interview</h3>
+          </div>
+              <div class="panel-body">
+                 <a href="/interviews/new" align="right" class="btn btn-success">Create</a>
+                 <p align="right"> Create your new interview</p>
+
+              </div>
+
+
+          </div>
+
+        </div>
+      </div>
+      <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Interview Status</h3>
+              <div id="myStat" data-dimension="250" data-text="35%" data-info="New Clients" data-width="30" data-fontsize="38" data-percent="35" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd" data-total="200" data-part="35" data-icon="long-arrow-up" data-icon-size="28" data-icon-color="#fff">
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+
+<script>
+</div>
   
-  <%= image_tag @candidate.image.url :thumb %>
-</p>
-<p>
-  <strong>First name:</strong>
-  <%= @candidate.first_name %>
-</p>
+</div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @candidate.last_name %>
-</p>
+	
 
-<p>
-  <strong>Email:</strong>
-  <%= @candidate.email %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @candidate.phone %>
-</p>
-
-<%= link_to 'Edit', edit_candidate_path(@candidate) %> |
-<%= link_to 'Back', candidates_path %>
 
 
