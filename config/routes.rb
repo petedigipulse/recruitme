@@ -11,7 +11,13 @@ Rails.application.routes.draw do
   end
 
   resources :positions
-  resources :candidates
+
+  resources :candidates do 
+    collection do
+      get :create_interview
+    end
+  end
+
 
 
   get 'signup' => 'employers#new'

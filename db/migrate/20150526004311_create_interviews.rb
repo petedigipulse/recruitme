@@ -14,6 +14,7 @@ class CreateInterviews < ActiveRecord::Migration
       t.text :comments
       t.string :comments_by
       t.string :staff_notified
+     
 
       t.timestamps null: false
     end

@@ -7,7 +7,7 @@
 <div class="row">
   <div class="col-md-4"><p>
 	  <h1>My DashBoard</h1>
-	  <%= image_tag @candidate.image.url :thumb %>
+	  <%= image_tag @candidate.image.url :medium %>
 	</p>
 	<p>
 	  <strong>First name:</strong>
@@ -42,7 +42,7 @@
   <div class="col-md-4">
       <div class="panel panel-info">
         <div class="panel-heading">
-          <h3 class="panel-title">My Job Positions</h3>
+          <h3 class="panel-title">My Available Positions</h3>
         </div>
         <div class="panel-body">
           <ul class="list-group">
@@ -90,24 +90,24 @@
             </li>
             <li class="list-group-item">
               <span class="badge">2</span>
-              All Current Interviews
+              New Available Interviews
             </li>
             <li class="list-group-item">
               <span class="badge">15</span>
-              Interview Feedback
+              My Interview Feedback
             </li>
             <li class="list-group-item">
               <span class="badge">10</span>
-              Completed Interviews
+              My Completed Interviews
             </li>
           </ul>
           <div class="panel panel-primary">
             <div class="panel-heading">
-              <h3 class="panel-title">Create New Interview</h3>
+              <h3 class="panel-title">Available Interviews</h3>
           </div>
               <div class="panel-body">
-                 <a href="/interviews/new" align="right" class="btn btn-success">Create</a>
-                 <p align="right"> Create your new interview</p>
+                 <a href="/interviews/new" align="right" class="btn btn-success">View</a>
+                 <p align="right"> View your new interview</p>
 
               </div>
 

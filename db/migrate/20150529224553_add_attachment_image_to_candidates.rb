@@ -9,3 +9,4 @@ class AddAttachmentImageToCandidates < ActiveRecord::Migration
     remove_attachment :candidates, :image
   end
 end
+

@@ -4,6 +4,7 @@ class CreatePositions < ActiveRecord::Migration
       t.date   :start_date
       t.date   :expiry_date
       t.string :department
+      t.string :category
       t.string :job_position
       t.string :job_title
       t.text   :description
@@ -16,6 +17,7 @@ class CreatePositions < ActiveRecord::Migration
       t.string :candidate_ranking
       t.string :tags
       t.string :position_status
+      t.string :invited_candidates_id
 
       t.timestamps null: false
     end
