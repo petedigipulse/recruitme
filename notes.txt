@@ -11,5 +11,10 @@ New candidates sign up the interview will be on their control panel main page.
 new candidate clicks link and conducts interview. 
 
 
+Test employer welcome email. 
+
+Create SEO friendly link_to slug methods for blog
+
+
 
 
