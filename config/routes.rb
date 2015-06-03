@@ -19,10 +19,10 @@ Rails.application.routes.draw do
   end
 
 
-
-  get 'signup' => 'employers#new'
   resources :employers 
   # post 'signup' 
+  get 'signup' => 'employers#new'
+  
 
 
   get 'signup' => 'candidate#new'

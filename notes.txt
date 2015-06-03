@@ -16,5 +16,24 @@ Test employer welcome email.
 Create SEO friendly link_to slug methods for blog
 
 
+Got stuck with error in console saying jquery.circliful
+
+
+Record and Upload
+<input type="button" value="⚫" onclick="record(this)">
+<input type="button" value="◼" onclick="stop(this)">
+var localMediaStream, recorder;
+
+var record = function(button) {
+  recorder = localMediaStream.record();
+};
+
+var stop = function(button) {
+  localMediaStream.stop();
+  recorder.getRecordedData(function(blob) {
+    // Upload blob using XHR2.
+  });
+};
+
 
 

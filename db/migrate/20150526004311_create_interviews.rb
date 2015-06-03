@@ -7,6 +7,7 @@ class CreateInterviews < ActiveRecord::Migration
       t.string :candidate_name
       t.string :candidate_id
       t.string :candidate_img
+      t.string :candidate_ranking
       t.integer :ratings
       t.string :status
       t.string :type

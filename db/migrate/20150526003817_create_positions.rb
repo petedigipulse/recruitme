@@ -14,7 +14,6 @@ class CreatePositions < ActiveRecord::Migration
       t.string :upload_seek
       t.string :upload_trademe
       t.string :type
-      t.string :candidate_ranking
       t.string :tags
       t.string :position_status
       t.string :invited_candidates_id
