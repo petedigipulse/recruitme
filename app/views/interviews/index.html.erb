@@ -24,13 +24,10 @@
    
   </div>
   <div align='center'>
-    <p><%= link_to 'Recently Added ', recent_interviews_path, class: 'link'%> |
-    <%= link_to 'By Candidate Ranking', ranking_interviews_path, class: 'link' %></p>
+    <p><%= link_to 'Recently Added ', recent_interviews_path, class: 'link'%> ||
+    <%= link_to 'By Candidate Ranking ', ranking_interviews_path, class: 'link' %></p>
     </div>
       <div class="form-group">
-      
-          
-          
       
   
 <div class='row'>
@@ -51,7 +48,7 @@
       </ul>
     <div id="myTabContent" class="tab-content">
       <div class="tab-pane fade active in" id="home">
-        <center><h3> Latest Candidate Interviews </h3></center>
+        <center><h3> All Candidate Interviews </h3></center>
       </div>
       <div class="tab-pane fade" id="profile">
         <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
@@ -78,6 +75,7 @@
               <div class="panel-body">
                 <% @candidates.each do |candidate| %>
                     <% if candidate.id == interview.candidate.id %>
+                    <% @candidate_id = candidate.id %>
                     <div class'col-mid-2' align="left">
                         <p><%= image_tag candidate.image.url :thumb %></p>
                     </div>
@@ -87,7 +85,7 @@
                       <strong><p align='right'>Job Title: </strong><%= interview.job_title %></p>           
                       <div class="caption">
                     </div>
-                      <p class="btn btn-primary" role="button"><%= link_to "Interview", interview_path(interview.id) %></a></p>
+                      <p class="btn btn-primary" role="button"><%= link_to "Interview", interview_path(interview.id, @candidate_id) %></a></p>
                       <div class='glyphicon glyphicon-cog' pull='right'></div>
                 </div>  
               </div>
