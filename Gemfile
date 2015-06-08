@@ -32,6 +32,8 @@ gem 'paperclip'
 
 gem 'rmagick', '~> 2.15.0'
 
+gem 'videojs_rails'
+
 
 
 # Use Unicorn as the app server

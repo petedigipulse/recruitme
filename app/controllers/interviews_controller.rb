@@ -22,7 +22,7 @@ class InterviewsController < ApplicationController
   # GET /interviews/1.json
   def show
     @interview = Interview.find_by(params[:id] )
-    @candidates = Candidate.find_by(params[:candidates_id])
+    @candidates = Candidate.find_by(params[:id])
     # @interviews = Interview.find_by(params[:positions_id], params[:candidates_id])
   end
 
