@@ -32,6 +32,9 @@ gem 'paperclip'
 
 gem 'rmagick', '~> 2.15.0'
 
+gem 'Ziggeo', '~> 1.01'
+
+
 
 
 # Use Unicorn as the app server
