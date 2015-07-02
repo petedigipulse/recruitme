@@ -15,6 +15,7 @@ class PositionsController < ApplicationController
   # GET /positions/new
   def new
     @position = Position.new
+    @candidates = Candidate.all 
   end
 
   # GET /positions/1/edit

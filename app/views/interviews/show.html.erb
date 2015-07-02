@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
   
-
-
-<p>
+<div class="col-md-4">
+  <p>
   <strong>Type:</strong>
   <%= @interview.job_title %>
 </p>
@@ -29,15 +28,22 @@
 
 <%= link_to 'Edit', edit_interview_path(@interview) %> |
 <%= link_to 'Back', interviews_path %>
+</div>
 
+<center><h1> Interview Responses From <%= @interview.candidate_name %></h1></center>
+<br>
 <div>
   <center><iframe width="660" height="415" src="https://www.youtube.com/embed/Yc4SN41VMHc?rel=0" frameborder="0" allowfullscreen></iframe></center>
 </div>
 
 <br> 
 <div class='container'>
+
   <div class="progress">
   <div class="progress-bar" style="width: 100%;"></div>
 </div>
  
+
+
+</div>
 
