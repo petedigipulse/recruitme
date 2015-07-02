@@ -10,6 +10,8 @@
 
 Employer.create( first_name: 'Pete', last_name: 'Duncan', email: 'pete@venividivici.com', company: 'Veni Vidi Vici', phone: '2309493', password: '1234', image_file_name: './assets/images/venividivici.png')
 
+Employer.create( first_name: 'Jack', last_name: 'Jones', email: 'jack@jones.com', company: 'Joneses', phone: '2309493', password: '123', image_file_name: './assets/images/venividivici.png')
+
 Position.create(start_date: Time.now, expiry_date: Time.now + 2000000, job_position: 'Digital Marketer', job_title: 'Digital Marketing Expert')
 
 Candidate.create(first_name: 'Peter', last_name: 'Duncan', email: 'peter@petecandidate.com', phone: '92384-384', password_digest: 'pass', image_file_name: 'http://digitalpulse.co.nz/wp-content/uploads/2014/01/petebw-e1389051881185.png')
