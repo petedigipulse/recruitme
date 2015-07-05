@@ -56,15 +56,14 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   
-  gem 'devise'
+ gem 'devise'
 
 end
 
 group :production do
 	gem 'rails_12factor'
 	gem 'pg', '~> 0.18.2' 
-	 gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
-  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+	
 end
 
 
