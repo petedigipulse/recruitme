@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150530234725) do
+ActiveRecord::Schema.define(version: 20150705221948) do
 
   create_table "candidates", force: :cascade do |t|
     t.string   "first_name"
@@ -56,7 +56,6 @@ ActiveRecord::Schema.define(version: 20150530234725) do
     t.string   "candidate_name"
     t.string   "candidate_id"
     t.string   "candidate_img"
-    t.string   "candidate_ranking"
     t.integer  "ratings"
     t.string   "status"
     t.string   "type"
@@ -72,7 +71,6 @@ ActiveRecord::Schema.define(version: 20150530234725) do
     t.date     "start_date"
     t.date     "expiry_date"
     t.string   "department"
-    t.string   "category"
     t.string   "job_position"
     t.string   "job_title"
     t.text     "description"
@@ -82,11 +80,28 @@ ActiveRecord::Schema.define(version: 20150530234725) do
     t.string   "upload_seek"
     t.string   "upload_trademe"
     t.string   "type"
+    t.string   "candidate_ranking"
     t.string   "tags"
     t.string   "position_status"
-    t.string   "invited_candidates_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "job_reference",      default: 0
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string   "questions"
+    t.string   "client_questions"
+    t.string   "category"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "seed_s", force: :cascade do |t|
+    t.string   "questions"
+    t.string   "client_questions"
+    t.string   "category"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
 end
