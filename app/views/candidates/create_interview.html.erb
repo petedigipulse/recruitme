@@ -19,34 +19,7 @@
    </html>
 </div>
 
-######## Ruby ##################
 
-<%=
-print('<div class="wall-of-videos-container">')
-print('<ziggeo ziggeo-width=320 ziggeo-height=240>')
-print('</ziggeo>')
-print('Record / Upload here')
-print('</div>')
-
-ziggeo.videos().index().each do |video|
-  print('<div class="wall-of-videos-container">')
-  print('<ziggeo ziggeo-video="' + video['token'] + '"') 
-  print('ziggeo-width=320 ziggeo-height=240')
-  print('ziggeo-popup>')
-  print('</ziggeo>')
-  print(video['created'])
-  print('&middot')
-  print(video['duration'] + " seconds")
-  print("</div>")
-end
-
-
-<ziggeo ziggeo-width=320
-        ziggeo-height=240
-        ziggeo-limit=120>
-</ziggeo>
-%>
-############## JS ################
 ZiggeoApi.Videos.index({}, {
   success: function (args, videos) {
     // videos is an array of all the videos
