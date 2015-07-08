@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'welcome/homepage'
   get 'welcome/pricing'
+  get 'welcome/faqs'
+  get 'welcome/careers'
 
 
   resources :interviews do
