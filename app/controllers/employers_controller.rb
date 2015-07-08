@@ -5,7 +5,7 @@ class EmployersController < ApplicationController
   # GET /employers
   # GET /employers.json
   def index
-    @employers = Employer.all
+    @employers = Employer.find(params[:id])
   end
 
   # GET /employers/1
