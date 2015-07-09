@@ -33,7 +33,7 @@ class EmployersController < ApplicationController
         session[:employer_id] = @employer.id
         format.html { redirect_to @employer, notice: 'Your account was successfully created.' }
         format.json { render :show, status: :created, location: @employer }
-        EmployerMailer.welcome_email(@employer).deliver
+        # EmployerMailer.welcome_email(@employer).deliver
       else
         format.html { render :new }
         format.json { render json: @employer.errors, status: :unprocessable_entity }

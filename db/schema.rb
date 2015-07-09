@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150530234725) do
+ActiveRecord::Schema.define(version: 20150705221948) do
 
   create_table "candidates", force: :cascade do |t|
     t.string   "first_name"
@@ -64,8 +64,8 @@ ActiveRecord::Schema.define(version: 20150530234725) do
     t.text     "comments"
     t.string   "comments_by"
     t.string   "staff_notified"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "positions", force: :cascade do |t|
@@ -85,8 +85,24 @@ ActiveRecord::Schema.define(version: 20150530234725) do
     t.string   "tags"
     t.string   "position_status"
     t.string   "invited_candidates_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string   "questions"
+    t.string   "client_questions"
+    t.string   "category"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "seed_s", force: :cascade do |t|
+    t.string   "questions"
+    t.string   "client_questions"
+    t.string   "category"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
 end
