@@ -31,14 +31,21 @@
 		   	  <% else %>
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
 		      <ul class="nav navbar-nav navbar-right">
+		      	<li><a href="/welcome/pricing"> | <span class="sr-only"></span></a></li>
 		        <li><a href="/welcome/pricing">Pricing <span class="sr-only"></span></a></li>
-		        <li><a href="/welcome/careers">Careers</a></li>
 		        <li><a href="/welcome/faqs">FAQ's</a></l>
+		       	<li><a href="/welcome/careers">Careers</a></li>
+		       	<li><a href="/welcome/pricing"> | <span class="sr-only"></span></a></li>
 		      </ul>
 		      
 		        
 		   	  <ul class="nav navbar-nav navbar-right">
+		   	  	<li><a href="/welcome/pricing"> | <span class="sr-only"></span></a></li>
+		   	  	<li><%= link_to "Candidates", login_path %></li>
+		   	  	<li><%= link_to "Sign Up", new_employer_path %></li>
 		        <li><%= link_to "Sign In", login_path %></li>
+		        
+
 		      <% end %>
 		      </ul>
 

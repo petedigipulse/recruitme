@@ -34,6 +34,7 @@ gem 'rmagick', '~> 2.15.0'
 
 gem 'Ziggeo', '~> 1.01'
 
+gem 'httparty', '~> 0.13.5'
 
 
 
