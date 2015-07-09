@@ -2,6 +2,112 @@
   
 
 
+<div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead">Questions</p>
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">Question 1</a>
+                    <a href="#" class="list-group-item">Question 2</a>
+                    <a href="#" class="list-group-item">Question 3</a>
+                    <a href="#" class="list-group-item">Question 4</a>
+                    <a href="#" class="list-group-item">Question 5</a>
+                    <a href="#" class="list-group-item">Question 6</a>
+                    <a href="#" class="list-group-item">Question 7</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+
+                <div class="thumbnail">
+                    <img class="img-responsive" src="../assets/portfolio/recruit6.png" alt="">
+                    <br>
+                    <div class="caption-full">
+                        <h4 class="pull-right">Status: Open</h4>
+                        <h4><a href="#">Senior Ruby On Rails Developer</a>
+                        </h4>
+                        <p>Why would you like to come and work for our</a>.</p>
+                        <p>Check out this persons profile!
+                            <strong><a href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">Profile and blog</a>
+                            </strong>This person has created a blog</p>
+                        <p>We are looking for a senior developer with experience in Ruby on Rails. </p>
+                    </div>
+                    <div class="ratings">
+                        <p class="pull-right">3 reviews</p>
+                        <p>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            4.0 stars
+                        </p>
+                    </div>
+                </div>
+
+                <div class="well">
+
+                    <div class="text-right">
+                        <a class="btn btn-success">Leave a Review</a>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            Jimmy Olaf
+                            <span class="pull-right">10 days ago</span>
+                            <p>A very professional outlook and responses were right on the money. I would like to see this peron on the short list.</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            Jack Jones
+                            <span class="pull-right">12 days ago</span>
+                            <p>This candidate answered question 3 very professionally! I could work with this person very easily!</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            John Actor
+                            <span class="pull-right">15 days ago</span>
+                            <p>I thought this candidate did great job of detailing the strenghts for the position</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
 <p>
   <strong>Type:</strong>
   <%= @interview.job_title %>
@@ -29,39 +135,3 @@
 
 <%= link_to 'Edit', edit_interview_path(@interview) %> |
 <%= link_to 'Back', interviews_path %>
-
-<div>
-  <center><iframe width="660" height="415" src="https://www.youtube.com/embed/Yc4SN41VMHc?rel=0" frameborder="0" allowfullscreen></iframe></center>
-</div>
-
-<br> 
-<div class='container'>
-  <div class="progress">
-  <div class="progress-bar" style="width: 100%;"></div>
-</div>
-  <div class="row">
-    <div class="col-xs-6 col-md-3">
-      <h5>Interview Question One</h5>
-        <p><%= image_tag @candidates.image.url :thumb %></p>
-         <a href="#" class="btn btn-primary" role="button">View</a>
-    </div>
-    <div class="col-xs-6 col-md-3">
-      <h5>Interview Question Two</h5>
-        <p><%= image_tag @candidates.image.url :thumb %></p>
-         <a href="#" class="btn btn-primary" role="button">View</a>
-      </a>
-    </div>
-    <div class="col-xs-6 col-md-3">
-      <h5>Interview Question Three</h5>
-        <p><%= image_tag @candidates.image.url :thumb %></p>
-         <a href="#" class="btn btn-primary" role="button">View</a>
-      </a>
-    </div>
-    <div class="col-xs-6 col-md-3">
-      <h5>Interview Question Four</h5>
-        <p><%= image_tag @candidates.image.url :thumb %></p>
-        <a href="#" class="btn btn-primary" role="button">View</a>
-    </div>
-  </div>
-</div>
-
