@@ -28,6 +28,7 @@
 		   	  	<li><%= link_to "My Dashboard", current_employer %></li>
 		   	  	<li><%= link_to "Log Out", logout_path, method: "delete" %></li>
 		   	  </ul>
+		   	  
 		   	  <% else %>
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
 		      <ul class="nav navbar-nav navbar-right">
@@ -41,7 +42,6 @@
 		        
 		   	  <ul class="nav navbar-nav navbar-right">
 		   	  	<li><a href="/welcome/pricing"> | <span class="sr-only"></span></a></li>
-		   	  	<li><%= link_to "Candidates", login_path %></li>
 		   	  	<li><%= link_to "Sign Up", new_employer_path %></li>
 		        <li><%= link_to "Sign In", login_path %></li>
 		        

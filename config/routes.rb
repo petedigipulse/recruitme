@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   resources :candidates do 
     collection do
       get :create_interview
+      # get '/login' => 'sessions#new'
+      # post '/login' => 'sessions#create_candidate'
+      # delete 'logout' => 'sessions#destroy'
     end
   end
 
@@ -24,15 +27,12 @@ Rails.application.routes.draw do
   resources :employers 
   # post 'signup' 
   get 'signup' => 'employers#new'
-  
-
-
-  get 'signup' => 'candidate#new'
-
 
   get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
+  post '/login' => 'sessions#create_employer'
   delete 'logout' => 'sessions#destroy'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
