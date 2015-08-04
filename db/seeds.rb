@@ -17,4 +17,4 @@ Interview.create(ratings: 5, status: 'candidate registered', candidate_id: '2', 
 
 Interview.create(ratings: 5, status: 'candidate registered', candidate_id: '3', candidate_name: 'Frednik Fursik',  candidate_img: 'http://digitalpulse.co.nz/wp-content/uploads/2014/01/petebw-e1389051881185.png', job_title: 'Legal Eagle', job_description: 'Legal consultation expert...' )
 
-Questions.create(seed_questions: )
+
